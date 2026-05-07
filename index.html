@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roboros</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell" aria-label="Roboros">
+      <section class="gameboy" aria-label="Roboros handheld console">
+        <div class="top-bar">
+          <span class="speaker-dot"></span>
+          <div class="brand-logo" aria-label="Roboros">
+            <img src="roboros_logo.png" alt="Roboros" />
+          </div>
+          <span class="speaker-dot"></span>
+        </div>
+
+        <div class="screen-frame">
+          <div class="screen-head">
+            <div>
+              <span class="label">Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span class="label">Mode</span>
+              <strong id="mode">Ready</strong>
+            </div>
+            <div>
+              <span class="label">Best</span>
+              <strong id="best">0</strong>
+            </div>
+          </div>
+          <div class="screen">
+            <canvas id="game" width="480" height="480" aria-label="Roboros game field"></canvas>
+            <div id="statusPanel" class="status-panel">
+              <span id="statusTitle">Roboros</span>
+              <small id="statusText">WASD</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-row">
+          <div class="dpad" aria-hidden="true">
+            <span class="key key-w">W</span>
+            <span class="key key-a">A</span>
+            <span class="key key-s">S</span>
+            <span class="key key-d">D</span>
+          </div>
+
+          <div class="actions" aria-label="Game controls">
+            <button id="startBtn" type="button">Start Game</button>
+            <button id="pauseBtn" type="button">Pause</button>
+            <button id="resetBtn" type="button">Reset Game</button>
+          </div>
+        </div>
+
+        <div class="pixel-strip" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
